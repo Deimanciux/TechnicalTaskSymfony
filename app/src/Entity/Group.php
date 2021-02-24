@@ -21,7 +21,12 @@ class Group
     /**
      * @ORM\Column(type="string", length=100)
      */
-    private $Title;
+    private $title;
+
+    /**
+     * @ORM\Column(type="integer", length=11)
+     */
+    private $maxAmountOfStudents;
 
     public function getId(): ?int
     {
@@ -30,12 +35,31 @@ class Group
 
     public function getTitle(): ?string
     {
-        return $this->Title;
+        return $this->title;
     }
 
-    public function setTitle(string $Title): self
+    public function setTitle(string $title): self
     {
-        $this->Title = $Title;
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaxAmountOfStudents()
+    {
+        return $this->maxAmountOfStudents;
+    }
+
+    /**
+     * @param int $maxAmountOfStudents
+     * @return $this
+     */
+    public function setMaxAmountOfStudents(int $maxAmountOfStudents): self
+    {
+        $this->maxAmountOfStudents = $maxAmountOfStudents;
 
         return $this;
     }

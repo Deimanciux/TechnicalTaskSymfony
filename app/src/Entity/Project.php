@@ -22,6 +22,9 @@ class Project
      */
     private $Title;
 
+
+    private $teacher;
+
     public function getId(): ?int
     {
         return $this->id;

@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="545ecb37-fa4c-45d6-ad43-686f8abfe352" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/TechnicalTaskSymfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TechnicalTaskSymfony.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.env" beforeDir="false" afterPath="$PROJECT_DIR$/app/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/styles/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/FooController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/StatusPageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Entity/Group.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/Group.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Entity/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Entity/Student.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Entity/Teacher.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/navigation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/navigation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/status-page/status-page.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/status-page/teacher-status-page.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +112,8 @@
       <path value="$PROJECT_DIR$/app/vendor/symfony/security-guard" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/maker-bundle" />
       <path value="$PROJECT_DIR$/app/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/web-profiler-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1otTXKpXGXALNSKO81gTzuOr7HW" />
@@ -117,7 +127,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Deimante\PhpstormProjects\TechnicalTaskSymfony\app\templates" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -142,7 +158,7 @@
       <option name="presentableId" value="Default" />
       <updated>1614104925711</updated>
       <workItem from="1614104928439" duration="6757000" />
-      <workItem from="1614153271189" duration="10434000" />
+      <workItem from="1614153271189" duration="30156000" />
     </task>
     <servers />
   </component>
@@ -150,14 +166,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="691" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614195836391">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="691" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614195836391" />
+    <state x="753" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1614190882730">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="753" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614190882730" />
+    <state x="690" y="52" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1614178297816">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="52" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614178297816" />
+    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1614187028959">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614187028959" />
     <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1614112306096">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614112306096" />
-    <state x="649" y="335" key="NewPhpClassDialog" timestamp="1614112359769">
+    <state x="649" y="335" key="NewPhpClassDialog" timestamp="1614186999874">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="649" y="335" key="NewPhpClassDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614112359769" />
+    <state x="649" y="335" key="NewPhpClassDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614186999874" />
     <state x="794" y="444" key="NewPhpFileDialog" timestamp="1614105965232">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

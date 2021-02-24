@@ -5,13 +5,13 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
-class FooController extends AbstractController
+class StatusPageController extends AbstractController
 {
     /**
-     * @Route("/index", name="index_pade")
+     * @Route("/", name="index_page")
      */
     public function index()
     {
-        return $this->render('status-page/status-page.html.twig');
+        return $this->render('status-page/teacher-status-page.html.twig');
     }
 }
