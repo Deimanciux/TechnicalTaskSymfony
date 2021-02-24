@@ -1,0 +1,38 @@
+@import "~bootstrap/scss/bootstrap";
+
+#project-name, #number-of-groups, #students-per-group {
+    display: inline;
+    font-weight: bold;
+}
+
+.status-table th{
+    font-weight: 400;
+}
+
+.row {
+    margin: 1em 0 0 1em;
+}
+
+.col {
+    margin: 0 2em 2em 0;
+}
+
+.group {
+    width: 70%;
+}
+
+.dropdown-button {
+    width: 100%;
+}
+
+.add-button, .dropdown-button {
+    margin-top: 0;
+}
+
+.students-table-placeholder, .group {
+    margin-bottom: 0;
+}
+
+.groups-title-col {
+    margin: 0;
+}
