@@ -37,7 +37,22 @@
     margin: 0;
 }
 
-#project_Create_Project, #user_Register{
+#project_Create_Project, #teacher_Register, #student_Add_student{
     background-color: gray;
     border-color: gray;
+}
+
+td, th {
+    text-align: center;
+}
+
+.project-table td {
+    text-align: left;
+}
+
+.project-table th {
+    text-align: left;
+}
+.delete_button, .delete_button:hover {
+    color: ghostwhite;
 }

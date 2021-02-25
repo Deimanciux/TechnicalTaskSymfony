@@ -2,35 +2,24 @@
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
+use App\Repository\TeacherRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity(repositoryClass=UserRepository::class)
- * @UniqueEntity(fields="fullName", message="This full name is already used")
+ * @ORM\Entity(repositoryClass=TeacherRepository::class)
  * @UniqueEntity(fields="username", message="This username is already used")
  */
-class User implements UserInterface
+class Teacher implements UserInterface
 {
-    const STUDENT_USER = 'STUDENT';
-    const TEACHER_USER = 'TEACHER';
-
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
     private $id;
-
-    /**
-     * @ORM\Column(type="string", length=70, unique=true)
-     * @Assert\NotBlank()
-     * @Assert\Length(min="2", max="70")
-     */
-    private $fullName;
 
     /**
      * @ORM\Column(type="string", length=50, unique=true)
@@ -48,7 +37,12 @@ class User implements UserInterface
      * @var array
      * @ORM\Column(type="simple_array")
      */
-    private $roles;
+    private $roles = ['ROLE_USER'];
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Project", mappedBy="teacher")
+     */
+    private $project;
 
     public function getId(): ?int
     {
@@ -101,25 +95,6 @@ class User implements UserInterface
     public function setRoles(array $roles): self
     {
         $this->roles = $roles;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getFullName()
-    {
-        return $this->fullName;
-    }
-
-    /**
-     * @param $fullName
-     * @return $this
-     */
-    public function setFullName($fullName): self
-    {
-        $this->fullName = $fullName;
 
         return $this;
     }

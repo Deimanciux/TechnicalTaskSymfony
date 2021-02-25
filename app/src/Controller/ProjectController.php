@@ -4,11 +4,13 @@ namespace App\Controller;
 use App\Entity\Group;
 use App\Entity\Project;
 use App\Form\ProjectType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
+ * @Security("is_granted('ROLE_USER')")
  * @Route("/project")
  */
 class ProjectController extends AbstractController
@@ -23,24 +25,28 @@ class ProjectController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()) {
-            $amountOfGroups = $form['amountOfGroups']->getData();
-            $studentsPerGroup = $form['studentsPerGroup']->getData();
+            $teacher = $this->getUser();
             $entityManager = $this->getDoctrine()->getManager();
-
-            for($i = 0; $i < $amountOfGroups; $i++) {
-                $group = new Group();
-                $group->setTitle("group" . $i);
-                $group->setMaxAmountOfStudents($studentsPerGroup);
-                $entityManager->persist($group);
-                $entityManager->flush();
-            }
-
+            $project = $form->getData();
+            $project->setStudentsPerGroup($form['studentsPerGroup']->getData());
+            $project->setTeacher($teacher);
             $entityManager->persist($project);
+
+            $amountOfGroups = $form['amountOfGroups']->getData();
+
+            for($i = 1; $i < $amountOfGroups + 1; $i++) {
+                $group = new Group();
+                $group->setTitle("Group #" . $i);
+                $group->setProject($project);
+                $project->addGroup($group);
+                $entityManager->persist($group);
+            }
             $entityManager->flush();
+
             return $this->redirectToRoute('index_page');
         }
 
-        return $this->render('forms/projectType.html.twig', [
+        return $this->render('forms/form.html.twig', [
             'form' => $form->createView()
         ]);
     }

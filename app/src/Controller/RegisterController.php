@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
-use App\Form\UserType;
+use App\Entity\Teacher;
+use App\Form\TeacherType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -23,32 +23,24 @@ class RegisterController extends AbstractController
 //            return $this->redirectToRoute('index_page');
 //        }
 
-        $user = new User();
-        $form = $this->createForm(UserType::class, $user);
+        $teacher = new Teacher();
+        $form = $this->createForm(TeacherType::class, $teacher);
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()) {
-            $user = $form->getData();
-
-            $password = $passwordEncoded->encodePassword($user, $user->getPassword());
-            $user->setPassword($password);
-
-            $role = $form['role']->getData();
-            $user->setRoles([$role]);
+            $teacher = $form->getData();
+            $password = $passwordEncoded->encodePassword($teacher, $teacher->getPassword());
+            $teacher->setPassword($password);
 
             $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($user);
+            $entityManager->persist($teacher);
             $entityManager->flush();
 
-            $token = new UsernamePasswordToken($user, $password, 'main', $user->getRoles());
+            $token = new UsernamePasswordToken($teacher, $password, 'main', $teacher->getRoles());
             $tokenStorage->setToken($token);
             $session->set('_security_main', serialize($token));
 
-            if($form['role']->getData() === User::TEACHER_USER) {
-                return $this->redirectToRoute('add_project');
-            }
-
-            return $this->render('status-page/student-status-page.html.twig');
+            return $this->redirectToRoute('add_project');
         }
 
         return $this->render('register/register.html.twig', [

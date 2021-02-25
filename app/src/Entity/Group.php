@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\GroupRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -24,9 +26,20 @@ class Group
     private $title;
 
     /**
-     * @ORM\Column(type="integer", length=11)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Project", inversedBy="groups")
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $maxAmountOfStudents;
+    private $project;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Student", mappedBy="group")
+     */
+    private $students;
+
+    public function __construct()
+    {
+        $this->students = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -46,21 +59,41 @@ class Group
     }
 
     /**
-     * @return int
+     * @param mixed $project
      */
-    public function getMaxAmountOfStudents()
+    public function setProject($project): void
     {
-        return $this->maxAmountOfStudents;
+        $this->project = $project;
     }
 
     /**
-     * @param int $maxAmountOfStudents
+     * @return Collection
+     */
+    public function getStudents(): Collection
+    {
+        return $this->students;
+    }
+
+    /**
+     * @param ArrayCollection $students
      * @return $this
      */
-    public function setMaxAmountOfStudents(int $maxAmountOfStudents): self
+    public function setStudents(ArrayCollection $students): self
     {
-        $this->maxAmountOfStudents = $maxAmountOfStudents;
+        $this->students = $students;
 
         return $this;
     }
+
+    /**
+     * @return Project
+     */
+    public function getProject(): Project
+    {
+        return $this->project;
+    }
+
+//    public function __toString(){
+//        return strval($this->getId());
+//    }
 }
