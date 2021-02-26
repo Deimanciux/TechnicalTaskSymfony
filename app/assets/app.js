@@ -12,3 +12,32 @@ import './js/app.js';
 $(document).ready(function () {
     $('[data-toggle="popover"]').popover();
 });
+
+
+
+let intervalId = window.setInterval(function(){
+    getStudentsFromDatabase();
+}, 10000);
+
+function getStudentsFromDatabase() {
+    let project_id = document.getElementById('project_id').innerHTML;
+
+    $.ajax({
+        method: "GET",
+        url: "/api/project/" + project_id + "/students",
+        dataType: 'json',
+
+        success: function (response) {
+            // let data = response.data;
+            //
+            // for(item of data) {
+            //     boards.push(item);
+            // }
+
+            console.log(response.data)
+        },
+        error: function (response) {
+            console.log(response);
+        }
+    });
+}

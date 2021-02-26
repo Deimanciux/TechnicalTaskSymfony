@@ -92,8 +92,4 @@ class Group
     {
         return $this->project;
     }
-
-//    public function __toString(){
-//        return strval($this->getId());
-//    }
 }

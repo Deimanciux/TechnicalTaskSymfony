@@ -30,7 +30,6 @@ class StudentController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()) {
-            $group = $form['group']->getData();
 
             if(sizeof($form['group']->getData()->getStudents()) == $project->getStudentsPerGroup()) {
                 $flashBag->add('notice', 'This group is full, choose another one');

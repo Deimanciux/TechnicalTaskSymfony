@@ -2,21 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="545ecb37-fa4c-45d6-ad43-686f8abfe352" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TechnicalTaskSymfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TechnicalTaskSymfony.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/styles/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/StatusPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/StatusPageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Controller/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/StudentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Entity/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Entity/Group.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/Group.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Repository/StudentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Repository/StudentRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/navigation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/navigation.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/status-page/teacher-status-page.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/status-page/teacher-status-page.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -166,7 +161,7 @@
       <workItem from="1614104928439" duration="6757000" />
       <workItem from="1614153271189" duration="39787000" />
       <workItem from="1614238675895" duration="42185000" />
-      <workItem from="1614326595875" duration="13157000" />
+      <workItem from="1614326595875" duration="26987000" />
     </task>
     <servers />
   </component>
@@ -186,18 +181,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614344418092" />
-    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1614285694551">
+    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1614376803493">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614285694551" />
+    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614374685702" />
+    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614376803493" />
     <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1614112306096">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614112306096" />
-    <state x="649" y="335" key="NewPhpClassDialog" timestamp="1614351371830">
+    <state x="649" y="335" key="NewPhpClassDialog" timestamp="1614365739838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="649" y="335" key="NewPhpClassDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614351371830" />
+    <state x="649" y="335" key="NewPhpClassDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614365739838" />
     <state x="794" y="444" key="NewPhpFileDialog" timestamp="1614105965232">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -210,9 +206,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614238900263" />
-    <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1614349996787">
+    <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1614377756290">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614349996787" />
+    <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614367217690" />
+    <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1614377756290" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1614365956671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614365956671" />
   </component>
 </project>
