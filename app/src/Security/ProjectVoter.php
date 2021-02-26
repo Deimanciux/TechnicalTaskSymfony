@@ -32,7 +32,7 @@ class ProjectVoter extends Voter
             return false;
         }
 
-        /**@var Project $project*/
+        /**@var Project $project */
         $project = $subject;
 
         return $project->getTeacher()->getId() === $authenticatedUser->getId();

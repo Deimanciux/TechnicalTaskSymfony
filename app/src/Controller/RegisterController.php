@@ -27,7 +27,7 @@ class RegisterController extends AbstractController
         $form = $this->createForm(TeacherType::class, $teacher);
         $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $teacher = $form->getData();
             $password = $passwordEncoded->encodePassword($teacher, $teacher->getPassword());
             $teacher->setPassword($password);

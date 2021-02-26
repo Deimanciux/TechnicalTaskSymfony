@@ -29,9 +29,9 @@ class StudentController extends AbstractController
         $form = $this->createForm(StudentType::class, $student, ['project' => $project]);
         $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
 
-            if(sizeof($form['group']->getData()->getStudents()) == $project->getStudentsPerGroup()) {
+            if (sizeof($form['group']->getData()->getStudents()) == $project->getStudentsPerGroup()) {
                 $flashBag->add('notice', 'This group is full, choose another one');
 
                 return $this->redirectToRoute('add_student', [

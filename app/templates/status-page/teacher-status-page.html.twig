@@ -51,15 +51,16 @@
                         </tr>
                         </thead>
                         <tbody>
-                            {% for group in project.groups %}
-                                {% for student in group.students %}
-                                    <tr>
-                                        <td>{{ student.fullName }}</td>
-                                        <td>{{ student.group.title }}</td>
-                                        <td><a class="delete_button" href="{{ path('remove_student', {'id': student.id }) }}">Delete</a></td>
-                                    </tr>
-                                {% endfor %}
+                        {% for group in project.groups %}
+                            {% for student in group.students %}
+                                <tr>
+                                    <td>{{ student.fullName }}</td>
+                                    <td>{{ student.group.title }}</td>
+                                    <td><a class="delete_button"
+                                           href="{{ path('remove_student', {'id': student.id }) }}">Delete</a></td>
+                                </tr>
                             {% endfor %}
+                        {% endfor %}
                         </tbody>
                     </table>
                 </div>
@@ -82,50 +83,54 @@
         <div class="row">
             {% for group in project.groups %}
 
-            <div class="col-md-6 mb-4">
-                <table class="table table-dark group-table group">
-                    <thead>
-                    <tr>
-                        <th scope="col">{{ group.title }}</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+                <div class="col-md-6 mb-4">
+                    <table class="table table-dark group-table group">
+                        <thead>
+                        <tr>
+                            <th scope="col">{{ group.title }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
 
-                    {% for student in group.students %}
-                                <tr>
-                                    <td>
-                                        <div>{{ student.fullName}}</div>
-                                    </td>
-                                </tr>
+                        {% for student in group.students %}
+                            <tr>
+                                <td>
+                                    <div>{{ student.fullName }}</div>
+                                </td>
+                            </tr>
                         {% endfor %}
 
                         {% if project.studentsperGroup - group.students|length > 0 %}
                             {% for i in 1..(project.studentsperGroup - group.students|length) %}
-                            <tr>
-                                <th scope="row">
-                                    <div class="dropdown">
-                                        <a class="btn btn-secondary dropdown-toggle dropdown-button" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Dropdown link
-                                        </a>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="dropdown">
+                                            <a class="btn btn-secondary dropdown-toggle dropdown-button" href="#"
+                                               role="button" data-toggle="dropdown" aria-haspopup="true"
+                                               aria-expanded="false">
+                                                Dropdown link
+                                            </a>
 
-                                        <div class="dropdown-menu dropdown-button" aria-labelledby="dropdownMenuLink">
-                                            {% for groupIterator in project.groups %}
-                                                {%  for student in groupIterator.students %}
-                                                    <a class="dropdown-item" href="{{ path('edit_student', {'student' : student.id, 'group' : group.id}) }}">{{ student.fullName }}</a>
+                                            <div class="dropdown-menu dropdown-button"
+                                                 aria-labelledby="dropdownMenuLink">
+                                                {% for groupIterator in project.groups %}
+                                                    {% for student in groupIterator.students %}
+                                                        <a class="dropdown-item"
+                                                           href="{{ path('edit_student', {'student' : student.id, 'group' : group.id}) }}">{{ student.fullName }}</a>
+                                                    {% endfor %}
                                                 {% endfor %}
-                                            {% endfor %}
 
+                                            </div>
                                         </div>
-                                    </div>
-                                </th>
-                            </tr>
-                        {% endfor %}
-                    {% endif %}
+                                    </th>
+                                </tr>
+                            {% endfor %}
+                        {% endif %}
 
-                    </tbody>
-                </table>
-            </div>
-        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

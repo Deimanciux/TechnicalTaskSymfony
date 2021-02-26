@@ -63,11 +63,14 @@ class Project
     }
 
     /**
-     * @param mixed $teacher
+     * @param $teacher
+     * @return $this
      */
-    public function setTeacher($teacher): void
+    public function setTeacher($teacher): self
     {
         $this->teacher = $teacher;
+
+        return $this;
     }
 
     /**
@@ -79,17 +82,20 @@ class Project
     }
 
     /**
-     * @param mixed $studentsPerGroup
+     * @param $studentsPerGroup
+     * @return $this
      */
-    public function setStudentsPerGroup($studentsPerGroup): void
+    public function setStudentsPerGroup($studentsPerGroup): self
     {
         $this->studentsPerGroup = $studentsPerGroup;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getStudentsPerGroup()
+    public function getStudentsPerGroup(): int
     {
         return $this->studentsPerGroup;
     }
@@ -97,7 +103,8 @@ class Project
     /**
      * @param Group $group
      */
-    public function addGroup(Group $group) {
+    public function addGroup(Group $group)
+    {
         $this->groups->add($group);
     }
 
@@ -110,9 +117,9 @@ class Project
     }
 
     /**
-     * @return mixed
+     * @return Teacher
      */
-    public function getTeacher()
+    public function getTeacher(): Teacher
     {
         return $this->teacher;
     }

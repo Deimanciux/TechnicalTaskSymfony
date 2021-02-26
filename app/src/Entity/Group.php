@@ -59,11 +59,14 @@ class Group
     }
 
     /**
-     * @param mixed $project
+     * @param $project
+     * @return $this
      */
-    public function setProject($project): void
+    public function setProject($project): self
     {
         $this->project = $project;
+
+        return $this;
     }
 
     /**

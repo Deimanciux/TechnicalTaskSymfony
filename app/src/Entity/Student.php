@@ -58,18 +58,21 @@ class Student
     }
 
     /**
-     * @return mixed
+     * @return Group
      */
-    public function getGroup()
+    public function getGroup(): Group
     {
         return $this->group;
     }
 
     /**
-     * @param mixed $group
+     * @param $group
+     * @return $this
      */
-    public function setGroup($group): void
+    public function setGroup($group): self
     {
         $this->group = $group;
+
+        return $this;
     }
 }

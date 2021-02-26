@@ -13,8 +13,6 @@ $(document).ready(function () {
     $('[data-toggle="popover"]').popover();
 });
 
-
-
 let intervalId = window.setInterval(function(){
     getStudentsFromDatabase();
 }, 10000);

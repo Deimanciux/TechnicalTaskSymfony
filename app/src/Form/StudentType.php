@@ -19,7 +19,7 @@ class StudentType extends AbstractType
         $builder->add('fullName', TextType::class)
             ->add('group', EntityType::class, [
                 'class' => Group::class,
-                'choices' =>  $project->getGroups(),
+                'choices' => $project->getGroups(),
                 'choice_label' => 'title'
             ])
             ->add('Add_student', SubmitType::class);

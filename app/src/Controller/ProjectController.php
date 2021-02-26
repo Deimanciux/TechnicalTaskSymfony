@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controller;
+
 use App\Entity\Group;
 use App\Entity\Project;
 use App\Form\ProjectType;
@@ -24,7 +25,7 @@ class ProjectController extends AbstractController
         $form = $this->createForm(ProjectType::class, $project);
         $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $teacher = $this->getUser();
             $entityManager = $this->getDoctrine()->getManager();
             $project = $form->getData();
@@ -34,7 +35,7 @@ class ProjectController extends AbstractController
 
             $amountOfGroups = $form['amountOfGroups']->getData();
 
-            for($i = 1; $i < $amountOfGroups + 1; $i++) {
+            for ($i = 1; $i < $amountOfGroups + 1; $i++) {
                 $group = new Group();
                 $group->setTitle("Group #" . $i);
                 $group->setProject($project);

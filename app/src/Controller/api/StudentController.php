@@ -6,7 +6,6 @@ use App\Entity\Group;
 use App\Entity\Project;
 use App\Entity\Student;
 use App\Repository\StudentRepository;
-use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -57,7 +56,7 @@ class StudentController extends AbstractController
 
         return $this->json(
             [
-                "data" => array_map(function(Student $student) {
+                "data" => array_map(function (Student $student) {
                     return [
                         "fullName" => $student->getFullName(),
                         "group_id" => $student->getGroup()->getId()
