@@ -108,4 +108,12 @@ class Project
     {
         $this->groups = $groups;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getTeacher()
+    {
+        return $this->teacher;
+    }
 }

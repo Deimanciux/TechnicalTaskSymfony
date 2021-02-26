@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="545ecb37-fa4c-45d6-ad43-686f8abfe352" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/TechnicalTaskSymfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TechnicalTaskSymfony.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -10,18 +11,12 @@
       <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/ProjectController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Controller/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/StatusPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/StatusPageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Entity/Group.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/Group.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/StudentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Entity/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/Project.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/Teacher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Form/TeacherType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Repository/UserRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Repository/StudentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Repository/StudentRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/forms/projectType.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/status-page/student-status-page.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/navigation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/navigation.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/status-page/teacher-status-page.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/status-page/teacher-status-page.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,6 +114,11 @@
       <path value="$PROJECT_DIR$/app/vendor/symfony/validator" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/web-profiler-bundle" />
       <path value="$PROJECT_DIR$/app/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/app/vendor/bin/.phpunit" />
+      <path value="$PROJECT_DIR$/app/vendor/dama/doctrine-test-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/data-fixtures" />
     </include_path>
   </component>
   <component name="ProjectId" id="1otTXKpXGXALNSKO81gTzuOr7HW" />
@@ -165,7 +165,8 @@
       <updated>1614104925711</updated>
       <workItem from="1614104928439" duration="6757000" />
       <workItem from="1614153271189" duration="39787000" />
-      <workItem from="1614238675895" duration="32798000" />
+      <workItem from="1614238675895" duration="42185000" />
+      <workItem from="1614326595875" duration="13157000" />
     </task>
     <servers />
   </component>
@@ -177,26 +178,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="691" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614195836391" />
-    <state x="753" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1614273609937">
+    <state x="753" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1614351398313">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="753" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614273609937" />
-    <state x="690" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1614199575865">
+    <state x="753" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614351398313" />
+    <state x="690" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1614344418092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614199575865" />
-    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1614272979926">
+    <state x="690" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614344418092" />
+    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1614285694551">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614272979926" />
+    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614285694551" />
     <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1614112306096">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614112306096" />
-    <state x="649" y="335" key="NewPhpClassDialog" timestamp="1614276905007">
+    <state x="649" y="335" key="NewPhpClassDialog" timestamp="1614351371830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="649" y="335" key="NewPhpClassDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614276905007" />
+    <state x="649" y="335" key="NewPhpClassDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614351371830" />
     <state x="794" y="444" key="NewPhpFileDialog" timestamp="1614105965232">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -209,9 +210,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614238900263" />
-    <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1614203602077">
+    <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1614349996787">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614203602077" />
+    <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614349996787" />
   </component>
 </project>

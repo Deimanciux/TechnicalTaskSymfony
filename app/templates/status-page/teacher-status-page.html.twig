@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="offset-1" id="app">
+    <div class="container" id="app">
 
         <div class="row">
-            <div class="col-md-2 align-self-start">
+            <div class="col-md-12 align-self-start">
                 <h3>Status page</h3>
             </div>
         </div>
@@ -38,9 +38,9 @@
         </div>
 
         <div class="row students-table-placeholder">
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <div class="table-responsive" id="students-table">
-                    <table class="table table-dark">
+                    <table class="table table-dark table-hover">
                         <thead>
                         <tr>
                             <th scope="col">Student</th>
@@ -64,7 +64,7 @@
             </div>
         </div>
 
-        <div class="row add-button">
+        <div class="row mb-4">
             <div class="col">
                 <a href="{{ path('add_student', {'id': project.id}) }}" class="btn btn-outline-dark">Add new student</a>
             </div>
@@ -80,7 +80,7 @@
         <div class="row">
             {% for group in project.groups %}
 
-            <div class="col col-md-5">
+            <div class="col-md-6 mb-4">
                 <table class="table table-dark group-table group">
                     <thead>
                     <tr>

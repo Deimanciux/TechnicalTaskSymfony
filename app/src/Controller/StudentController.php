@@ -20,13 +20,11 @@ class StudentController extends AbstractController
 {
     /**
      * @Route("/add/{id}", name="add_student")
+     * @Security("is_granted('add', project)", message="Access denied")
      * @return
      */
     public function add(Request $request, Project $project, FlashBagInterface $flashBag)
     {
-//        $repository = $this->getDoctrine()->getRepository(Project::class);
-//        $project = $repository->find($id);
-
         $student = new Student();
         $form = $this->createForm(StudentType::class, $student, ['project' => $project]);
         $form->handleRequest($request);
@@ -57,6 +55,7 @@ class StudentController extends AbstractController
 
     /**
      * @Route("/edit/{student}/{group}", name="edit_student")
+     * @Security("is_granted('edit', student)", message="Access denied")
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      *
@@ -73,6 +72,7 @@ class StudentController extends AbstractController
 
     /**
      * @Route("/remove/{id}", name="remove_student")
+     * @Security("is_granted('delete', student)", message="Access denied")
      */
     public function remove(Student $student, FlashBagInterface $flashBag)
     {

@@ -19,9 +19,9 @@ class RegisterController extends AbstractController
      */
     public function register(UserPasswordEncoderInterface $passwordEncoded, Request $request, TokenStorageInterface $tokenStorage, SessionInterface $session)
     {
-//        if ($this->isGranted('ROLE_USER')) {
-//            return $this->redirectToRoute('index_page');
-//        }
+        if ($this->isGranted('ROLE_USER')) {
+            return $this->redirectToRoute('index_page');
+        }
 
         $teacher = new Teacher();
         $form = $this->createForm(TeacherType::class, $teacher);
