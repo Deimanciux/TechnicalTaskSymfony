@@ -1,8 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <div>
         <div class="row">
-            <div class="col-md-2 offset-md-5 login_form">
+            <div class="col-md-4 offset-md-4 login_form">
                 {% for message in app.flashes('notice') %}
                     <div class="alert alert-danger">{{ message }}</div>
                 {% endfor %}
@@ -12,4 +13,5 @@
                 {{ form_end(form) }}
             </div>
         </div>
+    </div>
 {% endblock %}

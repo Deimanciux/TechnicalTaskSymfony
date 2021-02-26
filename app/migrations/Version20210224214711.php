@@ -20,6 +20,7 @@ final class Version20210224214711 extends AbstractMigration
     public function up(Schema $schema) : void
     {
         // this up() migration is auto-generated, please modify it to your needs
+        $this->addSql('ALTER TABLE `group` ADD project_id INT NOT NULL');
         $this->addSql('ALTER TABLE `group` ADD CONSTRAINT FK_6DC044C5166D1F9C FOREIGN KEY (project_id) REFERENCES project (id)');
         $this->addSql('CREATE INDEX IDX_6DC044C5166D1F9C ON `group` (project_id)');
         $this->addSql('ALTER TABLE project ADD teacher_id INT NOT NULL');

@@ -21,7 +21,8 @@ docker-compose up -d
 
 - install dependencies
 ```bash
-docker exec -it php74-container-docker bash composer install
+docker exec -it php74-container-docker bash
+composer install
 ```
 
 - install yarn
@@ -36,6 +37,7 @@ docker-compose run --rm node-service yarn encore dev
 
 - create database and run migrations
 ```bash
-docker exec -it php74-container-docker bash php bin/console doctrine:database:create
-docker exec -it php74-container-docker bash php bin/console doctrine:database:migrate
+docker exec -it php74-container-docker bash
+php bin/console doctrine:database:create
+php bin/console doctrine:migrations:migrate
 ```
