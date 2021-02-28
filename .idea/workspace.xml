@@ -4,15 +4,9 @@
     <list default="true" id="545ecb37-fa4c-45d6-ad43-686f8abfe352" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/StatusPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/StatusPageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/StudentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Entity/Group.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/Group.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Repository/StudentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Repository/StudentRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/api/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/Api/StudentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/status-page/teacher-status-page.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/status-page/teacher-status-page.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tests/StudentDeletionTest.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +155,10 @@
       <workItem from="1614104928439" duration="6757000" />
       <workItem from="1614153271189" duration="39787000" />
       <workItem from="1614238675895" duration="42185000" />
-      <workItem from="1614326595875" duration="26987000" />
+      <workItem from="1614326595875" duration="31577000" />
+      <workItem from="1614421693707" duration="747000" />
+      <workItem from="1614467272446" duration="3893000" />
+      <workItem from="1614545522270" duration="2841000" />
     </task>
     <servers />
   </component>
@@ -202,18 +199,23 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614112316548" />
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1614238900263">
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1614467279127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614238900263" />
-    <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1614377756290">
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614421825457" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614467279127" />
+    <state x="656" y="252" width="737" height="606" key="find.popup" timestamp="1614549481785">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614367217690" />
-    <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1614377756290" />
+    <state x="656" y="252" width="737" height="606" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1614549481785" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1614365956671">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614365956671" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614382698199">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1614382698199" />
   </component>
 </project>

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\api;
+namespace App\Controller\Api;
 
 use App\Entity\Group;
 use App\Entity\Project;
@@ -58,8 +58,10 @@ class StudentController extends AbstractController
             [
                 "data" => array_map(function (Student $student) {
                     return [
-                        "fullName" => $student->getFullName(),
-                        "group_id" => $student->getGroup()->getId()
+                        'fullName' => $student->getFullName(),
+                        'group_id' => $student->getGroup()->getId(),
+                        'group_title' => $student->getGroup()->getTitle(),
+                        'url' => $this->generateUrl('remove_student', ['id' => $student->getId()]),
                     ];
                 }, $students)
             ]
