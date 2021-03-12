@@ -98,4 +98,23 @@ class Teacher implements UserInterface
 
         return $this;
     }
+
+    /**
+     * @return Project
+     */
+    public function getProject(): Project
+    {
+        return $this->project;
+    }
+
+    /**
+     * @param $project
+     * @return $this
+     */
+    public function setProject($project): self
+    {
+        $this->project = $project;
+
+        return $this;
+    }
 }

@@ -31,7 +31,7 @@ class StudentController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            if (sizeof($form['group']->getData()->getStudents()) == $project->getStudentsPerGroup()) {
+            if ($form['group']->getData() != null && sizeof($form['group']->getData()->getStudents()) == $project->getStudentsPerGroup()) {
                 $flashBag->add('notice', 'This group is full, choose another one');
 
                 return $this->redirectToRoute('add_student', [
@@ -40,6 +40,7 @@ class StudentController extends AbstractController
             }
 
             $student = $form->getData();
+            $student->setProject($project);
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($student);
             $entityManager->flush();
@@ -79,7 +80,7 @@ class StudentController extends AbstractController
         $manager->remove($student);
         $manager->flush();
 
-        $flashBag->add('notice', 'Micro post was deleted');
+        $flashBag->add('success', 'Micro post was deleted');
 
         return $this->redirectToRoute('index_page');
     }

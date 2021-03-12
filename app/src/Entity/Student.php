@@ -29,9 +29,15 @@ class Student
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Group", inversedBy="students")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $group;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Project", inversedBy="students")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $project;
 
     public function getId(): ?int
     {
@@ -60,7 +66,7 @@ class Student
     /**
      * @return Group
      */
-    public function getGroup(): Group
+    public function getGroup(): ?Group
     {
         return $this->group;
     }
@@ -72,6 +78,25 @@ class Student
     public function setGroup($group): self
     {
         $this->group = $group;
+
+        return $this;
+    }
+
+    /**
+     * @return Project
+     */
+    public function getProject(): Project
+    {
+        return $this->project;
+    }
+
+    /**
+     * @param $project
+     * @return $this
+     */
+    public function setProject($project): self
+    {
+        $this->project = $project;
 
         return $this;
     }

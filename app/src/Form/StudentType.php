@@ -20,6 +20,9 @@ class StudentType extends AbstractType
             ->add('group', EntityType::class, [
                 'class' => Group::class,
                 'choices' => $project->getGroups(),
+                'empty_data' => null,
+                'required' => false,
+                'placeholder' => 'Do not choose a group',
                 'choice_label' => 'title'
             ])
             ->add('Add_student', SubmitType::class);

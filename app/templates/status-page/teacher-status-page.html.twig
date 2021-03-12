@@ -1,7 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="container" id="app">
+    <div class="container mt-1" id="app">
+
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">{{ message }}</div>
+        {% endfor %}
 
         <div class="row">
             <div class="col-md-12 align-self-start">
@@ -51,17 +55,21 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for group in project.groups %}
-                                {% for student in group.students %}
-                                    <tr>
-                                        <td>{{ student.fullName }}</td>
+                            {% for student in project.students %}
+                                <tr>
+                                    <td>{{ student.fullName }}</td>
+
+                                    {% if(student.group == null) %}
+                                        <td>-</td>
+                                    {% else %}
                                         <td>{{ student.group.title }}</td>
-                                        <td>
-                                            <a class="delete_button"
-                                               href="{{ path('remove_student', {'id': student.id }) }}">Delete</a>
-                                        </td>
-                                    </tr>
-                                {% endfor %}
+                                    {% endif %}
+
+                                    <td>
+                                        <a class="delete_button"
+                                           href="{{ path('remove_student', {'id': student.id }) }}">Delete</a>
+                                    </td>
+                                </tr>
                             {% endfor %}
                         </tbody>
                     </table>
@@ -107,22 +115,31 @@
                                 <tr>
                                     <th scope="row">
                                         <div class="dropdown">
-                                            <a class="btn btn-secondary dropdown-toggle dropdown-button" href="#"
+                                            <a class="btn btn-secondary dropdown-toggle dropdown-button"
                                                role="button" data-toggle="dropdown" aria-haspopup="true"
-                                               aria-expanded="false">
-                                                Assign student
-                                            </a>
+                                               aria-expanded="false">Assign student</a>
 
-                                            <div class="dropdown-menu dropdown-button"
-                                                 aria-labelledby="dropdownMenuLink">
-                                                {% for groupIterator in project.groups %}
-                                                    {% for student in groupIterator.students %}
+{#                                            <div class="dropdown-menu dropdown-button"#}
+{#                                                 aria-labelledby="dropdownMenuLink">#}
+{#                                                {% for groupIterator in project.groups %}#}
+{#                                                    {% for student in groupIterator.students %}#}
+{#                                                        <a class="dropdown-item"#}
+{#                                                           href="{{ path('edit_student', {'student' : student.id, 'group' : group.id}) }}">{{ student.fullName }}</a>#}
+{#                                                    {% endfor %}#}
+{#                                                {% endfor %}#}
+
+{#                                            </div>#}
+
+                                            <div class="dropdown-menu dropdown-button" aria-labelledby="dropdownMenuLink">
+
+                                                    {% for student in project.students %}
                                                         <a class="dropdown-item"
                                                            href="{{ path('edit_student', {'student' : student.id, 'group' : group.id}) }}">{{ student.fullName }}</a>
                                                     {% endfor %}
-                                                {% endfor %}
 
                                             </div>
+
+
                                         </div>
                                     </th>
                                 </tr>

@@ -36,6 +36,11 @@ class Project
     private $groups;
 
     /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Student", mappedBy="project")
+     */
+    private $students;
+
+    /**
      * @ORM\Column(type="integer", length=11)
      */
     private $studentsPerGroup;
@@ -43,6 +48,7 @@ class Project
     public function __construct()
     {
         $this->groups = new ArrayCollection();
+        $this->students = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -103,17 +109,20 @@ class Project
     /**
      * @param Group $group
      */
-    public function addGroup(Group $group)
+    public function addGroup(Group $group): void
     {
         $this->groups->add($group);
     }
 
     /**
      * @param ArrayCollection $groups
+     * @return $this
      */
-    public function setGroups(ArrayCollection $groups): void
+    public function setGroups(ArrayCollection $groups): self
     {
         $this->groups = $groups;
+
+        return $this;
     }
 
     /**
@@ -122,5 +131,24 @@ class Project
     public function getTeacher(): Teacher
     {
         return $this->teacher;
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getStudents(): Collection
+    {
+        return $this->students;
+    }
+
+    /**
+     * @param ArrayCollection $students
+     * @return $this
+     */
+    public function setStudents(ArrayCollection $students): self
+    {
+        $this->students = $students;
+
+        return $this;
     }
 }

@@ -13,9 +13,9 @@ $(document).ready(function () {
     $('[data-toggle="popover"]').popover();
 });
 
-let intervalId = window.setInterval(function(){
-    getStudentsFromDatabase();
-}, 10000);
+// let intervalId = window.setInterval(function(){
+//     getStudentsFromDatabase();
+// }, 10000);
 
 function getStudentsFromDatabase() {
     let project_id = document.getElementById('project_id').innerHTML;

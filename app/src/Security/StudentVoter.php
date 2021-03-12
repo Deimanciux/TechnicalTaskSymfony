@@ -37,6 +37,6 @@ class StudentVoter extends Voter
         /**@var Student $student */
         $student = $subject;
 
-        return $student->getGroup()->getProject()->getTeacher()->getId() === $authenticatedUser->getId();
+        return $student->getProject()->getTeacher()->getId() === $authenticatedUser->getId();
     }
 }
