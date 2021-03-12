@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="545ecb37-fa4c-45d6-ad43-686f8abfe352" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/migrations/Version20210312092750.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/StudentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/ProjectController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Entity/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/Project.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Entity/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/Student.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Entity/Teacher.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/Teacher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Form/StudentType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Form/StudentType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Security/StudentVoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Security/StudentVoter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/status-page/teacher-status-page.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/status-page/teacher-status-page.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Form/ProjectType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Form/ProjectType.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +160,7 @@
       <workItem from="1614467272446" duration="3893000" />
       <workItem from="1614545522270" duration="3414000" />
       <workItem from="1615534699028" duration="149000" />
-      <workItem from="1615534885670" duration="14091000" />
+      <workItem from="1615534885670" duration="24142000" />
     </task>
     <servers />
   </component>
@@ -217,10 +211,10 @@
     </state>
     <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614367217690" />
     <state x="656" y="252" width="737" height="606" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1614549481785" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1614365956671">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1615556257552">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1614365956671" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.-95.1920.1040@0.0.1920.1040" timestamp="1615556257552" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1615543949495">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

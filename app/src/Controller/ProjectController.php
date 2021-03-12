@@ -26,6 +26,7 @@ class ProjectController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
             $teacher = $this->getUser();
             $entityManager = $this->getDoctrine()->getManager();
             $project = $form->getData();

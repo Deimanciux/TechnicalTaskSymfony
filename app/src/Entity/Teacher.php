@@ -24,7 +24,7 @@ class Teacher implements UserInterface
     /**
      * @ORM\Column(type="string", length=50, unique=true)
      * @Assert\NotBlank()
-     * @Assert\Length(min="1", max="50")
+     * @Assert\Length(min="5", max="50")
      */
     private $username;
 
