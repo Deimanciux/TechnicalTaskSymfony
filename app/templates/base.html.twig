@@ -10,8 +10,10 @@
 <body>
 {{ include('navigation.html.twig') }}
 
+<div class="container mt-md-4" id="app">
 {% block body %}
 {% endblock %}
+</div>
 
 {% block javascripts %}
     {{ encore_entry_script_tags('app') }}

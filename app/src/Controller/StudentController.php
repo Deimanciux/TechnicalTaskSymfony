@@ -31,7 +31,7 @@ class StudentController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            if ($form['group']->getData() != null && sizeof($form['group']->getData()->getStudents()) == $project->getStudentsPerGroup()) {
+            if ($student->getGroup() !== null && sizeof($student->getGroup()->getStudents()) == $project->getStudentsPerGroup()) {
                 $flashBag->add('notice', 'This group is full, choose another one');
 
                 return $this->redirectToRoute('add_student', [
@@ -45,7 +45,9 @@ class StudentController extends AbstractController
             $entityManager->persist($student);
             $entityManager->flush();
 
-            return $this->redirectToRoute('index_page');
+            return $this->redirectToRoute('status_page', [
+                'id' => $project->getId()
+            ]);
         }
 
         return $this->render('forms/form.html.twig', [
@@ -63,11 +65,14 @@ class StudentController extends AbstractController
     public function edit(Student $student, Group $group)
     {
         $student->setGroup($group);
+        $project = $student->getProject();
 
         $entityManager = $this->getDoctrine()->getManager();
         $entityManager->flush();
 
-        return $this->redirectToRoute('index_page');
+        return $this->redirectToRoute('status_page', [
+            'id' => $project->getId()
+        ]);
     }
 
     /**
@@ -76,12 +81,15 @@ class StudentController extends AbstractController
      */
     public function remove(Student $student, FlashBagInterface $flashBag)
     {
+        $project = $student->getProject();
         $manager = $this->getDoctrine()->getManager();
         $manager->remove($student);
         $manager->flush();
 
         $flashBag->add('success', 'Micro post was deleted');
 
-        return $this->redirectToRoute('index_page');
+        return $this->redirectToRoute('status_page', [
+            'id' => $project->getId()
+        ]);
     }
 }

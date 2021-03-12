@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark navbar-expand-md sticky-top bg-dark p-0">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top bg-dark p-0" >
     <a class="navbar-brand col-sm-3 col-md-1 mr-0"
        href="{{ path('index_page') }}">Technical Task</a>
 
@@ -13,6 +13,10 @@
     <div class="order-2 order-md-1">
         <ul class="navbar-nav px-3">
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <li class="nav-item text-nowrap">
+                    <a class="nav-link"
+                       href="{{ path('index_page') }}">Projects</a>
+                </li>
                 <li class="nav-item text-nowrap">
                     <a class="nav-link"
                        href="#">{{ app.user.username }} </a>

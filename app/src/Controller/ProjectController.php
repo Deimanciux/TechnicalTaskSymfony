@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Group;
 use App\Entity\Project;
 use App\Form\ProjectType;
+use App\Service\ProjectService;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -18,8 +19,12 @@ class ProjectController extends AbstractController
 {
     /**
      * @Route("/add", name="add_project")
+     * @param Request $request
+     * @param ProjectService $projectService
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @throws \Doctrine\ORM\ORMException
      */
-    public function addProject(Request $request)
+    public function addProject(Request $request, ProjectService $projectService)
     {
         $project = new Project();
         $form = $this->createForm(ProjectType::class, $project);
@@ -29,23 +34,18 @@ class ProjectController extends AbstractController
 
             $teacher = $this->getUser();
             $entityManager = $this->getDoctrine()->getManager();
-            $project = $form->getData();
             $project->setStudentsPerGroup($form['studentsPerGroup']->getData());
             $project->setTeacher($teacher);
             $entityManager->persist($project);
 
             $amountOfGroups = $form['amountOfGroups']->getData();
+            $projectService->assignGroupsToProject($amountOfGroups, $project);
 
-            for ($i = 1; $i < $amountOfGroups + 1; $i++) {
-                $group = new Group();
-                $group->setTitle("Group #" . $i);
-                $group->setProject($project);
-                $project->addGroup($group);
-                $entityManager->persist($group);
-            }
             $entityManager->flush();
 
-            return $this->redirectToRoute('index_page');
+            return $this->redirectToRoute('status_page', [
+            'id' => $project->getId()
+        ]);
         }
 
         return $this->render('forms/form.html.twig', [
