@@ -7,6 +7,7 @@ use App\Entity\Project;
 use App\Entity\Student;
 use App\Repository\StudentRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -18,6 +19,8 @@ class StudentController extends AbstractController
 {
     /**
      * @Route("/student/add", name="api_add_student", methods={"POST"})
+     * @param Request $request
+     * @return JsonResponse
      */
     public function addStudent(Request $request)
     {
@@ -44,7 +47,8 @@ class StudentController extends AbstractController
 
     /**
      * @Route("/project/{id}/students")
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     * @param Project $project
+     * @return JsonResponse
      */
     public function getStudentsByProject(Project $project)
     {

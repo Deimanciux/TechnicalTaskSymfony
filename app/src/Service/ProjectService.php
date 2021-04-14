@@ -6,6 +6,7 @@ use App\Entity\Group;
 use App\Entity\Project;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\ORMException;
 
 class ProjectService
 {
@@ -22,7 +23,7 @@ class ProjectService
     /**
      * @param int $amountOfGroups
      * @param Project $project
-     * @throws \Doctrine\ORM\ORMException
+     * @throws ORMException
      */
     public function assignGroupsToProject(int $amountOfGroups, Project $project): void
     {

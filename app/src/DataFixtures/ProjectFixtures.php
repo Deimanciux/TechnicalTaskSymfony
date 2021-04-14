@@ -12,7 +12,7 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
     public function load(ObjectManager $manager)
     {
         $project = new Project();
-        $project->setTitle('projektas');
+        $project->setTitle('project');
         $project->setStudentsPerGroup(2);
         $project->setTeacher($this->getReference(TeacherFixtures::TEACHER_REFERENCE));
         $manager->persist($project);

@@ -87,7 +87,6 @@
         </div>
     </div>
 
-
     <div class="row">
         {% for group in project.groups %}
 
@@ -117,26 +116,13 @@
                                            role="button" data-toggle="dropdown" aria-haspopup="true"
                                            aria-expanded="false">Assign student</a>
 
-{#                                            <div class="dropdown-menu dropdown-button"#}
-{#                                                 aria-labelledby="dropdownMenuLink">#}
-{#                                                {% for groupIterator in project.groups %}#}
-{#                                                    {% for student in groupIterator.students %}#}
-{#                                                        <a class="dropdown-item"#}
-{#                                                           href="{{ path('edit_student', {'student' : student.id, 'group' : group.id}) }}">{{ student.fullName }}</a>#}
-{#                                                    {% endfor %}#}
-{#                                                {% endfor %}#}
-
-{#                                            </div>#}
-
                                         <div class="dropdown-menu dropdown-button" aria-labelledby="dropdownMenuLink">
 
                                                 {% for student in project.students %}
                                                     <a class="dropdown-item"
                                                        href="{{ path('edit_student', {'student' : student.id, 'group' : group.id}) }}">{{ student.fullName }}</a>
                                                 {% endfor %}
-
                                         </div>
-
 
                                     </div>
                                 </th>

@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Project;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
@@ -13,11 +13,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
  */
 class StatusPageController extends AbstractController
 {
-
     /**
      * @Route("/project/{id}", name="status_page")
      * @param Project $project
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
      */
     public function showProject(Project $project)
     {

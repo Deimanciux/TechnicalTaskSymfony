@@ -72,10 +72,10 @@ class Student
     }
 
     /**
-     * @param $group
+     * @param Group|null $group
      * @return $this
      */
-    public function setGroup($group): self
+    public function setGroup(?Group $group): self
     {
         $this->group = $group;
 

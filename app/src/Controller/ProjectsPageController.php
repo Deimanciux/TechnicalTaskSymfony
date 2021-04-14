@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProjectsPageController extends AbstractController
 {
     /**
-    * @Route("/index", name="index_page")
+    * @Route("/", name="index_page")
     */
     public function index()
     {

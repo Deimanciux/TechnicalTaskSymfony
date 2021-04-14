@@ -95,4 +95,30 @@ class Group
     {
         return $this->project;
     }
+
+    /**
+     * @param Student $student
+     * @return $this
+     */
+    public function addStudent(Student $student)
+    {
+        if (!$this->students->contains($student)) {
+            $this->students->add($student);
+
+            $student->setGroup($this);
+        }
+
+        return $this;
+    }
+
+    public function removeStudent(Student $student)
+    {
+        if ($this->students->contains($student)) {
+            $this->students->removeElement($student);
+
+            $student->setGroup(null);
+        }
+
+        return $this;
+    }
 }

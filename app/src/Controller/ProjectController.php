@@ -2,13 +2,15 @@
 
 namespace App\Controller;
 
-use App\Entity\Group;
 use App\Entity\Project;
 use App\Form\ProjectType;
 use App\Service\ProjectService;
+use Doctrine\ORM\ORMException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -21,8 +23,8 @@ class ProjectController extends AbstractController
      * @Route("/add", name="add_project")
      * @param Request $request
      * @param ProjectService $projectService
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
-     * @throws \Doctrine\ORM\ORMException
+     * @return RedirectResponse|Response
+     * @throws ORMException
      */
     public function addProject(Request $request, ProjectService $projectService)
     {
